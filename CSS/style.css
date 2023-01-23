@@ -90,7 +90,7 @@ col {
 .row11col-b:hover {
   background-color: #3da5fa;
 }
-.row-2, button {
+.row, button {
     border: none;
     outline: none;
     background: none;
