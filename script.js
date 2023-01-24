@@ -18,7 +18,7 @@ function changefontsize() {
 function isOverflown(element) {
   return element.scrollWidth > element.clientWidth;
 }
-// for on the buttons button 
+// for on the buttons 
 const screen = document.getElementById("myInput");
 const ans = document.getElementById("ansInput");
 let screenValue = ""; // inital value on the screen is empty
