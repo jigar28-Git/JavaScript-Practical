@@ -32,179 +32,205 @@
     
 
     <div class="container-fluid">  
-      <div class="container border calculator shadow-sm rounded">
+      <!-- Calculator Start -->
+      <div class="container border calculator shadow-sm rounded" id="calculator">
+        <!-- input start -->
         <div class="row row-1 d-flex">
           <div class="col-12 input-bar d-flex justify-content-end">
             <input type="text" style="font-size: 4rem;" class="w-100 mt-2 text-end" value="0" id="myInput" onkeypress="changefontsize()" onchange="changefontsize()" maxlength="23">
           </div>
         </div>
-
+        <!-- input End -->
+        <!-- ans input Start-->
+        <div class="row row-1 d-flex">
+          <div class="col-12 ans-input-bar d-flex justify-content-end">
+            <input type="text" style="font-size: 1rem;" class="w-100 mt-2 text-end" value="0" id="ansInput" onkeypress="changefontsize()" onchange="changefontsize()" maxlength="23" disabled>
+          </div>
+        </div>
+        <!-- ans input End-->
         <div class="row row-2 d-flex">
-          <div class="col-2 functionscolor">
-            <span style="font-size: 1.2rem;">DEG</span>
+          <div class="col-2 functionscolor btn">
+            <span style="font-size: 1.2rem;"> <button>DEG</button></span>
           </div>
           <div class="col-2 functionscolor">
-            <span style="font-size: 1.2rem;">F-E</span>
+            <span style="font-size: 1.2rem;"> <button>F-E</button></span>
           </div>
         </div>
 
         <div class="row row-3 d-flex justify-content-around text-center">
           <div class="col-2 functionscolor">
-            <span style="font-size: 1.2rem; color: rgb(179, 175, 175);">MC</span>
+            <span style="font-size: 1.2rem; color: rgb(179, 175, 175);"><button>MC</button></span>
           </div>
           <div class="col-2 functionscolor">
-            <span style="font-size: 1.2rem; color: rgb(179, 175, 175);">MR</span>
+            <span style="font-size: 1.2rem; color: rgb(179, 175, 175);"><button>MR</button></span>
           </div>
           <div class="col-2 functionscolor">
-            <span style="font-size: 1.2rem;">M+</span>
+            <span style="font-size: 1.2rem;"><button>M+</button></span>
           </div>
           <div class="col-2 functionscolor">
-            <span style="font-size: 1.2rem;">M-</span>
+            <span style="font-size: 1.2rem;"><button>M-</button></span>
           </div>
           <div class="col-2 functionscolor">
-            <span style="font-size: 1.2rem;">MS</span>
+            <span style="font-size: 1.2rem;"><button>MS</button></span>
           </div>
         </div>
-
+        <!-- Trigonometry &Function Start-->
         <div class="row row-4 d-flex">
           <div class="col-5 functionscolor">
-            <span style="font-size: 1.2rem;"><img src="img/trigonometry-icon-18-16.png" alt="Trigonomr"> Trigonomry<i class="fa-solid fa-angle-down"></i></span>
+            
+            <div class="dropdown">
+              <button class="dropbtn"><span style="font-size: 1.1rem;"><img src="img/trigonometry-icon-18-16.png" alt="Trigonomr"> Trigonometry<i class="fa-solid fa-angle-down"></i></span></button>
+              <div class="dropdown-content text-center">
+                <div class="col"><button>Sin</button></div>
+                <div class="col"><button>Cos</button></div>
+                <div class="col"><button>Tan</button></div>
+                <div class="col"><button>Csc</button></div>
+                <div class="col"><button>Sec</button></div>
+                <div class="col"><button>Cot</button></div>
+              </div>
+            </div>
           </div>
-          <div class="col-5 functionscolor">
-            <span style="font-size: 1.2rem;"><img src="img/formula.png" class="formula" alt="formula"> Function <i class="fa-solid fa-angle-down"></i></span>
+          <div class="col-4 functionscolor">
+            <button><span style="font-size: 1.1rem;"><img src="img/formula.png" class="formula" alt="formula">Function<i class="fa-solid fa-angle-down"></i></span></button>
           </div>
         </div>
-
+        <!-- Trigonometry &Function Start-->
+        <!-- nd, pi, e, C, clear start -->
         <div class="row row-5 d-flex justify-content-around text-center">
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">2<sup style="font-size: 1rem;" >nd</sup> </span>
+            <button>2<sup style="font-size: 1rem;">nd</sup></button>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.5rem;"><img src="img/Pi-symbol.svg.png" class="pi" alt="pi"></span>
+            <span style="font-size: 1.5rem;"><button><img src="img/Pi-symbol.svg.png" class="pi" alt="pi" /></button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem;">e</span>
+            <span style="font-size: 1.7rem;"><button>e</button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.8rem;">C</span>
+            <span style="font-size: 1.8rem;"><button>C</button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.2rem;"><img src="img/backspace.png" class="delete" alt=""></span>
+            <span style="font-size: 1.2rem;"><button><img src="img/backspace.png" id="clear" class="delete" alt="">🡄</button></span>
           </div>
         </div>
-
+        <!-- nd, pi, e, C, clear End -->
+        <!-- x2, 1/x, |x|, exp, mod Start -->
         <div class="row row-6 my-1 d-flex justify-content-around text-center">
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">x<sup>2</sup> </span>
+            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><button>x<sup>2</sup></button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.5rem;">1/<sub style="font-size: 1.5rem;">x</sub></span>
+            <span style="font-size: 1.5rem;"><button>1/<sub style="font-size: 1.5rem;">x</sub></button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <div class="x"><span class="" style="font-size: 1.4rem;">|X|</span></div>
+            <div class="x"><span class="" style="font-size: 1.4rem;"><button>|X|</button></span></div>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.5rem;">exp</span>
+            <span style="font-size: 1.5rem;"><button>exp</button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.5rem;">mod</span>
+            <span style="font-size: 1.5rem;"><button>mod</button></span>
           </div>
         </div>
-
+        <!-- x2, 1/x, |x|, exp, mod End -->
+        <!-- 2√x, (, ), n!, ÷ Start -->
         <div class="row row-7 my-1 d-flex justify-content-around text-center">
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><sup style="font-size: 1.3rem;">2</sup><i class="fa-solid fa-square-root-variable square-root"></i></span>
+            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><button><sup style="font-size: 1.3rem;">2</sup>√x</button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.5rem;">(</sub></span>
+            <span style="font-size: 1.5rem;"><button>(</button></sub></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span class="" style="font-size: 1.4rem;">)</span>
+            <span class="" style="font-size: 1.4rem;"><button>)</button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.5rem;">n!</span>
+            <span style="font-size: 1.5rem;"><button>n!</button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.5rem;"><i class="fa-solid fa-divide mt-2"></i></span>
+           <span style="font-size: 1.5rem;"><button>÷</button></span>
           </div>
         </div>
-        
+        <!-- 2√x, (, ), n!, ÷ End -->
+        <!-- xy, 7, 8, 9, * Start -->
         <div class="row row-8 my-1 d-flex justify-content-around text-center">
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">x<sup style="font-size: 1.3rem;">y</sup></span>
+            <button><span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">x<sup style="font-size: 1.3rem;">y</sup></span></button>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span style="font-size: 1.7rem;">7</sub></span>
+            <span style="font-size: 1.7rem;"><button>7</button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span class="" style="font-size: 1.7rem;">8</span>
+           <span class="" style="font-size: 1.7rem;"><button>8</button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span style="font-size: 1.7rem;">9</span>
+            <span style="font-size: 1.7rem;"><button>9</button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem;">X</span>
+            <span style="font-size: 1.7rem;"><button>x</button></span>
           </div>
         </div>
-
+        <!-- xy, 7, 8, 9, * End -->
+        <!-- 10x, 4, 5, 6, - Start -->
         <div class="row row-9 my-1 d-flex justify-content-around text-center">
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">10<sup style="font-size: 1.3rem;">x</sup></span>
+            <button><span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">10<sup style="font-size: 1.3rem;">x</sup></span></button>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span style="font-size: 1.7rem;">4</sub></span>
+            <span style="font-size: 1.7rem;"><button>4</button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span class="" style="font-size: 1.7rem;">5</span>
+            <span class="" style="font-size: 1.7rem;"><button>5</button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span style="font-size: 1.7rem;">6</span>
+            <span style="font-size: 1.7rem;"><button>6</button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem;"><i class="fa-solid fa-minus"></i></span>
+            <span style="font-size: 1.8rem; width: 100px;"><button>-</button></span>
           </div>
         </div>
-
+        <!-- xy, 7, 8, 9, * End -->
+        <!-- log, 1, 2, 3, + Start -->
         <div class="row row-10 my-1 d-flex justify-content-around text-center">
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">log</span>
+            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><button>log</button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span style="font-size: 1.7rem;">1</span>
+            <span style="font-size: 1.7rem;"><button>1</button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span class="" style="font-size: 1.7rem;">2</span>
+            <span class="" style="font-size: 1.7rem;"><button>2</button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span style="font-size: 1.7rem;">3</span>
+            <span style="font-size: 1.7rem;"><button>3</button></span>
           </div>
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem;"><img src="img/plus.png" class="plus" alt="Plus+"></span>
+            <span style="font-size: 1.7rem;"><button>+</button></span>
           </div>
         </div>
-
+        <!-- xy, 7, 8, 9, * End -->
+        <!-- ln, +/-, 0, ., = Start -->
         <div class="row row-11 my-1 d-flex justify-content-around text-center">
           <div class="col-2 functionscolor shadow-sm">
-            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">In</span>
+            <span style="font-size: 1.7rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><button>ln</button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span style="font-size: 1.7rem;">+/<sub style="font-size: 3rem;">-</sub></span>
+            <span style="font-size: 1.7rem;"><button>+/<sub style="font-size: 3rem;">-</sub></button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span class="" style="font-size: 1.7rem;">0</span>
+            <span class="" style="font-size: 1.7rem;"><button>0</button></span>
           </div>
           <div class="col-2 numberscolor shadow-sm">
-            <span style="font-size: 1.7rem;">.</span>
+            <span style="font-size: 1.7rem;"><button>.</button></span>
           </div>
           <div class="col-2 row11col-b shadow-sm">
-            <span style="font-size: 1.7rem;"><i class="fa-solid fa-equals"></i></span>
+            <span style="font-size: 1.7rem;"><button>=</button></span>
           </div>
         </div>
-
+        <!-- ln, +/-, 0, ., = End -->
       </div>
+      <!-- Calculator End -->
     </div>
-    
-
     <!-- JavaScript -->
     <script src="script.js" ></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
